@@ -21,7 +21,7 @@ const toolbar = (props) => (
         <div className="spacer" />
         <div className="toolbar_navigation-items">
           <ul>
-          <div className='logo'><img className='logocls' src={logo}/></div>
+          <div className='logo'><img alt='anything' className='logocls' src={logo}/></div>
             <li className='li'>
               <Link to="/" id='homemenu'  className='toolbaranchorcls' >Home</Link>
             </li>

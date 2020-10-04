@@ -8,16 +8,9 @@ import line from "../pages/assets/line.png";
 // import data from "../dynamicData/data";
 import { useState } from "react";
 
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+
 
 const Home = () => {
   const [data, setData] = useState({
@@ -39,7 +32,7 @@ const Home = () => {
     const { value, name } = event.target;
 
     setData((preValue) => {
-      if (name == "firstnameinputbox") {
+      if (name === "firstnameinputbox") {
         return {
           firstname: value,
           secondname: preValue.secondname,
@@ -47,21 +40,21 @@ const Home = () => {
           email: preValue.email,
           phone: preValue.phone,
         };
-      } else if (name == "secondnameinputbox") {
+      } else if (name === "secondnameinputbox") {
         return {
           firstname: preValue.firstname,
           secondname: value,
           email: preValue.email,
           phone: preValue.phone,
         };
-      } else if (name == "emailinputbox") {
+      } else if (name === "emailinputbox") {
         return {
           firstname: preValue.firstname,
           secondname: preValue.secondname,
           email: value,
           phone: preValue.phone,
         };
-      } else if (name == "numberinputbox") {
+      } else if (name === "numberinputbox") {
         return {
           firstname: preValue.firstname,
           secondname: preValue.secondname,
@@ -76,25 +69,24 @@ const Home = () => {
     event.preventDefault();
   };
 
-  const classes = useStyles();
 
   return (
     <div className="buddy">
-      <div class="maindiv">
+      <div className="maindiv">
         <h1>Welcome To Our Futsal Booking System</h1>
       </div>
       <div className="mapsection">
         <div className="mapbanner">
           Map&nbsp; View
-          <img src={line}></img>
+          <img alt="nothing" src={line}></img>
         </div>
         <div className="mapbox">Map box</div>
       </div>
 
       {/* jhkujhkhk */}
 
-      <div class="contactus">
-        <div class="contacthead">
+      <div className="contactus">
+        <div className="contacthead">
           <h1 className="title"> Contact Us</h1>
           <div className="contactFlexContainer">
             <div>
@@ -144,16 +136,16 @@ const Home = () => {
             <div className="contactUsLeftSection">
               <h3>Information</h3>
               <br />
-              <p> <strong>
+               <strong>
                Our team has been trying the best they can to meet your expectations and requirements.
                 You can contact us by submitting this form or through our social media platforms.
                 If you have any queries, feel free to reach out to us. We will get back to you as soon as possible. Thank you! </strong>
                 <div className="logoContainerSocial">
-                  <img src={facebooklogo} />
-                  <img src={githublogo} />
-                  <img src={tweeterlogo} />
+                  <img alt="nothing" src={facebooklogo} />
+                  <img alt="nothing" src={githublogo} />
+                  <img alt="nothing" src={tweeterlogo} />
                 </div>
-              </p>
+              
             </div>
           </div>
         </div>

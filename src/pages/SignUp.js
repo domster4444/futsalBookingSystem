@@ -25,7 +25,7 @@ export default function SignUp() {
     const { value, name } = event.target;
 
     setData((preValue) => {
-      if (name == "firstnameinputbox") {
+      if (name === "firstnameinputbox") {
         return {
           firstname: value,
           secondname: preValue.secondname,
@@ -33,21 +33,21 @@ export default function SignUp() {
           email: preValue.email,
           phone: preValue.phone,
         };
-      } else if (name == "secondnameinputbox") {
+      } else if (name === "secondnameinputbox") {
         return {
           firstname: preValue.firstname,
           secondname: value,
           email: preValue.email,
           phone: preValue.phone,
         };
-      } else if (name == "emailinputbox") {
+      } else if (name === "emailinputbox") {
         return {
           firstname: preValue.firstname,
           secondname: preValue.secondname,
           email: value,
           phone: preValue.phone,
         };
-      } else if (name == "numberinputbox") {
+      } else if (name === "numberinputbox") {
         return {
           firstname: preValue.firstname,
           secondname: preValue.secondname,
@@ -66,7 +66,7 @@ export default function SignUp() {
     <div className="signupContainerMain">
       <div className="forMakingBoxAtCenter">
         <div className="signBox">
-          <img src={illustrator}></img>
+          <img alt="nothing" src={illustrator} ></img>
 
           <div className='formContainer'>
             {/* <h1>
@@ -102,17 +102,17 @@ export default function SignUp() {
                 value={data.phone}
               ></input>
 
-              <button className='submitBtnCls' type="submit"><img className='signUpIconCls' src={signupIcon}/>Create Account</button>
+              <button className='submitBtnCls' type="submit"><img alt="nothing" className='signUpIconCls' src={signupIcon}/>Create Account</button>
             </form>
           </legend>
           
           </div>
         <div className='policy'>By signing up, I agree to the Privacy Policy and Terms of service.
 </div>
-        <div className='login'>Have an account?   <a className='colorlog' href='http://localhost:3000/' target='_blank'>Log In  </a> </div>
+        <div className='login'>Have an account?   <a rel="noopener noreferrer"  className='colorlog' href='http://localhost:3000/' target='_blank'>Log In  </a> </div>
         </div>
       </div>
-      <img src={backgroundSignUpImage} className="bgimgsignup" />
+      <img alt="nothing" src={backgroundSignUpImage} className="bgimgsignup" />
     </div>
   );
 }
